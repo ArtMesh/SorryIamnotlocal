@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Sorry, I am not local</string>
+    <string-array name="cities">
+        <item>Нижний Новгород</item>
+        <item>Москва</item>
+        <item>Арзамас</item>
+    </string-array>
 </resources>
