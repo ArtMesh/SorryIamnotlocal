@@ -15,9 +15,21 @@ import java.util.List;
 public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> {
 
 	private List<Route> mRouteList;
+	private OnListClickListener mOnListClickListener;
 
-	public RouteListAdapter(List<Route> RouteList) {
+	@Override
+	public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+		super.onAttachedToRecyclerView(recyclerView);
+	}
+
+	public interface OnListClickListener {
+		void onListClick(Route route);
+	}
+
+
+	public RouteListAdapter(List<Route> RouteList, OnListClickListener onListClickListener) {
 		this.mRouteList = RouteList;
+		this.mOnListClickListener = onListClickListener;
 	}
 
 	@Override
@@ -47,6 +59,14 @@ public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> 
 		public RouteViewHolder(View itemView) {
 			super(itemView);
 			mRouteName = (TextView) itemView.findViewById(R.id.route_name);
+
+			itemView.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					Route route = mRouteList.get(getLayoutPosition());
+					mOnListClickListener.onListClick(route);
+				}
+			});
 		}
 
 		public void bind(Route route){
