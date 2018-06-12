@@ -26,7 +26,6 @@ public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> 
 		void onListClick(Route route);
 	}
 
-
 	public RouteListAdapter(List<Route> RouteList, OnListClickListener onListClickListener) {
 		this.mRouteList = RouteList;
 		this.mOnListClickListener = onListClickListener;
