@@ -1,8 +1,24 @@
 <resources>
+    <string-array name="space_id">
+        <item>ChIJV_nZeUjUUUERn8qTt_TNUns</item>
+        <item>ChIJT8zA_EbUUUERWfWlJbZVXe0</item>
+        <item>ChIJHd5Bp0jUUUER2kx0eo</item>
+        <item>ChIJGYWPUDTUUUER49uQ4vAfPUI</item>
+        <item>ChIJqaupa7DVUUERe9Evs9b7tkc</item>
+        <item>ChIJ6di4BUzUUUERzpr7kkZ1jgo</item>
+        <item>ChIJqSUzL7LVUUERs_EMCrpjtqg</item>
+    </string-array>
+    
+    <string name="nizhny_novgorod_id">ChIJUTID7vnVUUERqleWhM_A0yg</string>
+
+    
+    
+    
     <string name="app_name">Sorry, I am not local</string>
     <string-array name="cities">
         <item>Нижний Новгород</item>
         <item>Москва</item>
         <item>Арзамас</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>

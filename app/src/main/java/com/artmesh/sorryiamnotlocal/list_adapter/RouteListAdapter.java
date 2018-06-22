@@ -1,4 +1,4 @@
-package com.artmesh.sorryiamnotlocal.adapter;
+package com.artmesh.sorryiamnotlocal.list_adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.artmesh.sorryiamnotlocal.R;
-import com.artmesh.sorryiamnotlocal.objects.Route;
+import com.artmesh.sorryiamnotlocal.database.entities.Route;
 
 import java.util.List;
 
@@ -49,7 +49,7 @@ public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> 
 
 	@Override
 	public int getItemCount() {
-		return  mRouteList.size();
+		return mRouteList.size();
 	}
 
 	class RouteViewHolder extends RecyclerView.ViewHolder{
@@ -57,7 +57,7 @@ public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> 
 
 		public RouteViewHolder(View itemView) {
 			super(itemView);
-			mRouteName = (TextView) itemView.findViewById(R.id.route_name);
+			mRouteName = (TextView) itemView.findViewById(R.id.place_name);
 
 			itemView.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -69,7 +69,7 @@ public class RouteListAdapter extends Adapter<RouteListAdapter.RouteViewHolder> 
 		}
 
 		public void bind(Route route){
-			mRouteName.setText(route.getName());
+			mRouteName.setText(route.name);
 		}
 	}
 
